@@ -1,0 +1,95 @@
+.drop-area
+ padding: 5px
+ display: grid
+ border: 1px dashed $blue2-color
+ grid-column-gap: 5px
+ grid-row-gap: 5px
+ grid-template-columns: repeat(2, 1fr)
+ min-height: 120px
+ &.single
+  display: block
+  min-height: 50px
+  .gallery
+   display: block
+   .imgFrame
+    height: 25px
+ label
+  grid-column: 1 / 2
+  height: 15px
+  width: 200px
+  text-align: center
+  line-height: 15px
+ progress
+  grid-column: 2 / 3
+  width: 100%
+  height: 15px
+  visibility: hidden
+ &.highlight
+  border-color: $purple-color
+ .inputEl
+  display: none !important
+ .gallery
+  grid-column: 1 / 3
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-auto-flow: dense
+  grid-column-gap: 5px
+  grid-row-gap: 5px
+  max-height: 400px
+  overflow: auto
+  .imgFrame
+   display: flex
+   align-items: center
+   border: solid 1px $blue2-color
+   user-select: none
+   position: relative
+   justify-content: center
+   height: 100px
+   overflow: hidden
+   &::before
+    content: attr(data-name)
+    left: 0
+    position: absolute
+    bottom: 0px
+    font-size: 8px
+    text-align: center
+    background: $white-color
+    font-family: verdana
+    font-weight: 600
+    width: 100%
+    overflow: hidden
+    white-space: nowrap
+   &.other
+    &::before
+     font-size: 11px
+     bottom: auto
+     white-space: normal
+   &:hover
+    border-color: $purple-color
+    .del
+     display: block
+     position: absolute
+     top: 0
+     right: 3px
+     color: $red-color
+     font-size: 12px
+     &::after
+      content: "X"
+   .del
+    display: none
+   img
+    max-width: 100%
+    max-height: 100px
+    user-select: none
+    -webkit-user-drag: none
+
+ .button
+  display: inline-block
+  padding: 10px
+  background: #ccc
+  cursor: pointer
+  border-radius: 5px
+  border: 1px solid #ccc
+
+  &:hover
+   background: #ddd

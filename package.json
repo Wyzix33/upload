@@ -1,0 +1,15 @@
+{
+ "name": "upload",
+ "version": "1.0.0",
+ "main": "upload.js",
+ "author": "Floricel Gabriel-Costin",
+ "license": "No License",
+ "private": true,
+ "dependencies": {
+  "event": "Wyzix33/event",
+  "js-md5": "^0.7.3",
+  "socket": "link:../socket",
+  "tooltip": "Wyzix33/tooltip",
+  "utils": "Wyzix33/utils"
+ }
+}
